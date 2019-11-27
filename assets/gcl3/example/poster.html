@@ -332,6 +332,7 @@
             return (Math.random() * (mod)).toFixed(3);
         }
 
+        let dtNow = Date.now();
         for (let i = 0; i < mes.length; i++) {
             let me = mes[i];
             let mid = me.mid;
@@ -343,6 +344,7 @@
             } else {
                 me.ele.cells[2].firstElementChild.value = randomInt(10);
             }
+            me.ele.cells[4].firstElementChild.value = dtNow;
         }
     };
 

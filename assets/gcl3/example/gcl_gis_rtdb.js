@@ -109,6 +109,10 @@
                 useUTC: false
             }
         });
+        function activeLastPointToolip(chart) {
+            var points = chart.series[0].points;
+            chart.tooltip.refresh(points[points.length -1]);
+        }
         let showRtcurve = function (measureId) {
             Highcharts.chart(csRtcurveUiPrefix + measureId, {
                 chart: {
